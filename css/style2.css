@@ -1,0 +1,114 @@
+body {
+    background: url(../img/fond-index.jpg) no-repeat;
+    background-size: cover;
+    min-height: 80vh;
+    color: white;
+}
+
+.titre {
+    color : white;
+    text-align: center;
+    position: relative;
+    animation:arrive 0.5s ease-out;
+    -webkit-animation:arrive 0.5s ease-out;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14vh;
+}
+
+@-webkit-keyframes arrive {
+     0%{
+            top:-500px;
+        }
+        100%{
+            top:0px;
+        }
+    }
+
+
+}
+@media screen and (max-width: 640px) {
+    .titre {
+        font-size: 14vh;
+        
+    }
+  }
+
+  
+
+.p1 {
+    font-size: 5vh;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    line-height: 40px;
+    Margin-top: 150px;
+    Margin-left: 100px;
+    color: #7bdcfe;
+
+}
+
+.p1:hover {
+    font-size: 6vh;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    line-height: 40px;
+    Margin-top: 150px;
+    Margin-left: 100px;
+    color: #7bdcfe;
+
+}
+
+.p2 {
+    font-size: 5vh;
+    font-family: 'CodeNewRomanRegular'; 
+    
+
+  
+ 
+    color: #7bdcfe;
+    
+
+}
+
+/* .p2:hover {
+    font-size: 6vh;
+    font-family: 'CodeNewRomanRegular'; 
+    text-align: center;
+   margin-right: 150px;
+    line-height: 70px;
+    Margin-top: 150px;
+    color: #7bdcfe;
+
+} */
+
+/* .navbar-dark .navbar-toggler-icon {
+background-image: url('../img/Hamburger.png');
+}  */
+
+.row{
+display: inline;
+}
+
+#site-menu > button {
+    background-color: rgba(0,0,0,0);
+}
+
+a  {
+    text-decoration: none  !important;
+    color: white;
+}
+
+.image-moi {
+    height: 50vh;
+}
+
+.full{ width: 250px;
+    -webkit-transition: all 1s ease; /* Safari and Chrome */
+    -moz-transition: all 1s ease; /* Firefox */
+    -ms-transition: all 1s ease; /* IE 9 */
+    -o-transition: all 1s ease; /* Opera */
+    transition: all 1s ease;
+}
+
+.full:hover{  width:
+    300px;  }
+
