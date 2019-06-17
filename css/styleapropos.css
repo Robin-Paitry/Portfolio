@@ -1,0 +1,118 @@
+body {
+    background-color: #549193 ;
+    background-size: cover;
+    min-height: 100vh;
+    color: white;
+}
+
+.soustitre {
+    color : white;
+    text-align: center;
+      font-family: 'Open Sans', sans-serif;
+    font-size: 8vh;
+    margin-top: 60px;
+}
+
+
+
+.p1 {
+
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12pt;  
+ margin-bottom: 50px;
+  Margin-top: 10px;
+  padding-top: 40px;
+  Margin-left: 100px;
+  color: #ffffff;
+}
+
+.h3A {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 6vmin;
+/* margin-left: 55px;
+margin-top: 30px; */
+margin-bottom: 40px;
+}
+
+
+
+.p2 {
+
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14pt;  
+line-height: 30pt;
+  Margin-left: 50px;
+  margin-bottom: 50px;
+  
+  color: #ffffff;
+}
+
+.p3  {
+
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14pt;  
+
+  Margin-left: 50px;
+  margin-top: 85px;
+  
+  color: #ffffff;
+}
+
+
+.p5 {
+
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14pt;  
+  Margin-left: 50px;
+  color: #ffffff;
+}
+
+.logo-diplome {
+
+  margin-left: 75px;
+}
+
+.logo-competence {
+
+  margin-left: 85px;
+}
+
+.marge-graphic {
+
+  margin-left: 100px;
+  margin-top: -20px;
+  margin-bottom: 30px;
+}
+
+.marge-loisirs {
+  margin-left: 100px;
+}
+
+a, a:visited   {
+  text-decoration: none !important;
+}
+
+.p4 {
+  
+  margin-bottom: 50px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12pt; 
+}
+
+.liengit {
+
+  color:  #fef2e4 !important;
+
+}
+
+.ordre {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 640px) {
+  .ordre { 
+    flex-direction: row-reverse;
+    flex-wrap: wrap-reverse;
+  }   
+}
