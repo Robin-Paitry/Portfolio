@@ -1,0 +1,83 @@
+body {
+    background: url(../img/parabole2.png) no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    color: white;
+  
+}
+
+.soustitre {
+    color : white;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 8vh;
+    margin-top: 60px;
+    margin-bottom:60px;
+}
+
+.txtform {
+  color: white;
+}
+
+.p1 {
+  text-decoration: none  !important;
+  color:white;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16pt;
+  text-align: center;
+  margin-left: 10px;
+}
+
+.p2 {
+ 
+  color:#FEF2E4;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16pt;
+  
+}
+
+.p3 {
+ 
+  color:#FEF2E4;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12pt;
+  line-height: 25px;
+  float: left;
+  margin-left: 12px;
+
+  
+}
+
+::placeholder {
+   color: rgb(206, 212, 219) !important;
+   font-family: 'Open Sans', sans-serif;
+   }
+
+   input{
+
+    color: white !important;
+   }
+
+   textarea {
+
+    color: white !important;
+   }
+
+   .git {
+
+    margin-top: -10px;
+   }
+
+ .marge {
+   padding-left; 10px;
+ }
+
+ a  {
+  text-decoration: none  !important;
+  color: white;
+}
+
+.floatleft {
+
+  float: left;
+}
