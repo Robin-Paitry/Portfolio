@@ -1,0 +1,55 @@
+body {
+    background: url(../img/brush.jpg) no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    color: white;
+}
+
+
+  
+
+.p1 {
+    text-decoration: none  !important;
+    color:white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14pt;
+    text-align: center;
+  
+  }
+
+  .p2 {
+    text-decoration: none  !important;
+    color: #fef2e4;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14pt;
+    text-align: center;
+    margin-top: 10px;
+      
+  }
+
+  .soustitre {
+    color : white;
+    text-align: center;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 8vh;
+      margin-top: 40px;
+      margin-bottom:100px;
+}
+
+.lienbehance {
+  color:  #fef2e4 !important;
+}
+
+.radius {
+  border-radius: 50%;
+}
+
+.radius:hover {
+  border-radius:0%;
+}
+
+
+a  {
+  text-decoration: none  !important;
+  color: white;
+}
