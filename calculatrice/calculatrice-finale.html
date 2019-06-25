@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="description de la page">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title>Document</title>
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <!-- Other CSS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Custom CSS -->
+    <style>
+        
+        .row {
+            margin-top: 50px;
+        }
+    </style>
+    
+</head>
+<body>
+    
+    <!-- CONTENT START -->
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                
+                
+                <input type="text" id="resultat" class="w-100" >
+                <table class="table table-dark">
+                    <thead>
+                        <tr>
+                            <td><button type="button" class="btn btn-dark" onclick="addMemory();">M+</button></td>
+                            <td><button type="button" class="btn btn-dark" onclick="delMemory();">M-</button></td>
+                            <td><button type="button" class="btn btn-dark" onclick="calcul('%');">%</button></td>
+                            <td><button type="button" class="btn btn-dark" onclick="calcul('/')">/</button></td>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td><button type="button" class="btn btn-dark" onclick="calcul('7');">7</button></td>
+                        <td><button type="button" class="btn btn-dark" onclick="calcul('8');">8</button></td>
+                        <td><button type="button" class="btn btn-dark" onclick="calcul('9');">9</button></td>
+                        <td><button type="button" class="btn btn-dark" onclick="calcul('*');">*</button></td>
+                    </tr>
+                    <tr>
+                        <td><button type="button" class="btn btn-dark" onclick="calcul('4');">4</button></td>
+                        <td><button type="button" class="btn btn-dark" onclick="calcul('5');">5</button></td>
+                        <td><button type="button" class="btn btn-dark" onclick="calcul('6');">6</button></td>
+                        <td><button type="button" class="btn btn-dark" onclick="calcul('-');">-</button></td>
+                    </tr>
+                    <tr>
+                        <td><button type="button" class="btn btn-dark" onclick="calcul('1');">1</button></td>
+                        <td><button type="button" class="btn btn-dark" onclick="calcul('2');">2</button></td>
+                        <td><button type="button" class="btn btn-dark" onclick="calcul('3');">3</button></td>
+                        <td><button type="button" class="btn btn-dark" onclick="calcul('+');">+</button></td>
+                    </tr>
+                    <tr>
+                        <td><button type="button" class="btn btn-dark" onclick="clearDisplay();">C</button></td>
+                        <td><button type="button" class="btn btn-dark" onclick="calcul('0');">0</button></td>
+                        <td><button type="button" class="btn btn-dark" onclick="calcul('.');">.</button></td>
+                        <td><button type="button" class="btn btn-dark" onclick="results('=');">=</button></td>
+                    </tr>
+                </table>
+                
+            </div>
+        </div>
+    </div>
+    
+    <!-- CONTENT END -->
+    
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    
+    <!-- Custom JS (parallax, etc) -->
+    
+    
+    <!-- JS File -->
+    <script src="js/main.js"></script>
+    
+    <!-- InPage JS -->
+    <script>
+        
+        var buffer = "";
+        var memory1 ="";
+        var toucheEgaleAppuyer = 0;
+        var decoupe = "";
+        
+        // function qui fasse le calcul
+        function calcul(parametre)  {
+            if (toucheEgaleAppuyer == 1){ // jai appuyé sur la touche =
+                
+                // si la touche + est enfoncé, on converse le resultat precedent
+                // et on ajoute la touche +
+                if (Number.isInteger(parseInt(parametre)))  {
+                    
+                    buffer = parametre;
+                    document.getElementById('resultat').value = buffer;
+                    toucheEgaleAppuyer = 0; // on dit que la touche egale n'est plus appuyé
+                    console.log('test is integer')
+                } else {
+                    buffer = egaleResultat  + parametre;
+                    document.getElementById('resultat').value = buffer;
+                    toucheEgaleAppuyer = 0; // on dit que la touche egale n'est plus appuyé
+                    console.log('test not integer')
+                }
+                              
+            } else 
+            {
+                // on recupere le chiffre sur lequel on clique
+                // on recupere donc le PARAMETRE de la fonction
+                buffer = buffer + parametre;
+                document.getElementById('resultat').value = buffer;
+            }
+        }
+        
+        // focntion qui calcule le resultat
+        function results(){
+            // je dois recupérer la chaine du input
+            // faire l'évaluation de la chaine de caractere pour avoir le resultat
+            // result = document.getElementById('resultat').value;
+            // result = eval(result);
+            // document.getElementById('resultat').value = result;
+            
+            document.getElementById('resultat').value = eval(document.getElementById('resultat').value);
+            egaleResultat = eval(document.getElementById('resultat').value);
+            console.log('egaleResultat : '+egaleResultat);
+            toucheEgaleAppuyer=1;
+        }
+        
+        // fonction qui efface la ligne 
+        // changer la valeur du bouton C qui "re initialise" la valeur du champ input
+        function clearDisplay(){
+            result = document.getElementById('resultat').value = "";
+            // verifier si la variable existe, si oui, la vider
+            buffer="";
+        }       
+        
+        // fonction qui garde en mémmoire
+        //je click une premiere fois 
+        //si la mémoire est vide
+        function addMemory(){
+            if( memory1 == ""){ 
+                //enregistre la chaine dans la memoire
+                memory1 = document.getElementById('resultat').value;
+                console.log('chaine en mémoire (vrai) : ' + memory1) ;
+                //sinon
+            }      
+            else {
+                
+                //insere la chaine dans le champ input
+                document.getElementById('resultat').value += memory1;
+                console.log('chaine en mémoire (faux) : ' + memory1) ; 
+                //fin si
+            }
+            // forme ternaire
+            //memory1 == "" ?  memory1 = document.getElementById('resultat').value : document.getElementById('resultat').value += memory1;
+        }
+        
+        function delMemory(){
+            memory1 = "";
+            console.log('memoire vidée');
+        }
+
+
+        // si je click sur le M-  je veux vider la mémoire
+        //memory1 = "";   
+        // touche retourArriere
+        function toucheRetour(){
+            // recuperer le champ  input
+            document.getElementById('resultat').value ; 
+            // on supprime le derniere caractere
+            decoupe = document.getElementById('resultat').value;
+            buffer= decoupe.slice(0, -1);
+            // assigner la nouvelle valeur au champ input
+            document.getElementById('resultat').value = buffer;
+            
+        }
+        
+    </script>
+    
+</body>
+</html>
