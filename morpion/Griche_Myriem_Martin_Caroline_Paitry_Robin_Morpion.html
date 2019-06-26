@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="description de la page">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Custom CSS -->
+    <style>
+        
+        .container{
+            background: rgba(128, 66, 93, 0.61);
+            
+        }
+        h1 {
+            margin-top: 15px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        p {
+            text-align: center;
+        }
+        
+        #but {
+            border: 3px ridge rgb(202, 158, 158);
+            padding: 10px;
+            text-decoration: none;
+            color: rgba(56, 158, 153, 0.678);
+        }
+        
+        #but:hover {
+            color: black;
+            background-color: yellow;
+        }
+        
+        #Jeu {
+            width: 700px;
+            height:700px;
+            overflow: auto;
+            margin: auto;
+            padding: 10px;
+        }
+        
+        #Jeu button {
+            border-color: rgb(189, 125, 125);
+        }
+        
+        #Jeu div {
+            width: 500px;
+            margin: auto;
+            clear: both;
+        }
+        
+        #Jeu button {
+            width: 150px;
+            height: 150px;
+            font-weight: bold;
+            font-size: 50px;
+            margin: 8px;
+            float: left;
+        }
+        
+        #StatutJeu {
+            color: rgba(245, 197, 197, 0.829);
+            padding: 15px 10px;
+            text-align: center;
+            font-size: 20px;
+            border-bottom: 5px ridge #EBEBEB;
+        }
+        
+        #pied {
+            text-align: center;
+            font-size: 18px;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+        <section class="col-lg-12">
+            <h1>JEU DU MORPION</h1>
+            <div id="Jeu">
+                <div>
+                    <button type="button" class="btn btn-dark"></button>
+                    <button type="button" class="btn btn-dark"></button>
+                    <button type="button" class="btn btn-dark"></button>
+                </div>
+                <div>
+                    <button type="button" class="btn btn-dark"></button>
+                    <button type="button" class="btn btn-dark"></button>
+                    <button type="button" class="btn btn-dark"></button>
+                </div>
+                <div>
+                    <button type="button" class="btn btn-dark"></button>
+                    <button type="button" class="btn btn-dark"></button>
+                    <button type="button" class="btn btn-dark"></button>
+                </div>
+                
+                <div id="StatutJeu"></div>
+            </div>
+            
+        </section>
+        
+        
+        
+        
+        
+    </div>
+    <!-- CONTENT START -->
+    
+    <script>
+        function estValide(button)
+        {
+            return button.innerHTML.length == 0;
+        }
+        
+        function setSymbol(btn, symbole)
+        {
+            btn.innerHTML = symbole;
+        }
+        
+        function rechercherVainqueur(pions, joueurs, tour)
+        {
+            if (pions[0].innerHTML == joueurs[tour] &&
+                pions[1].innerHTML == joueurs[tour] &&
+                pions[2].innerHTML == joueurs[tour])
+            {
+                pions[0].style.backgroundColor = "#00b38f";
+                pions[1].style.backgroundColor = "#00b38f";
+                pions[2].style.backgroundColor = "#00b38f";
+                return true;
+            }
+            
+            if (pions[3].innerHTML == joueurs[tour] &&
+                pions[4].innerHTML == joueurs[tour] &&
+                pions[5].innerHTML == joueurs[tour])
+            {
+                pions[3].style.backgroundColor = "#00b38f";
+                pions[4].style.backgroundColor = "#00b38f";
+                pions[5].style.backgroundColor = "#00b38f";
+                return true;
+            }
+            
+            if (pions[6].innerHTML == joueurs[tour] &&
+                pions[7].innerHTML == joueurs[tour] &&
+                pions[8].innerHTML == joueurs[tour])
+            {
+                pions[6].style.backgroundColor = "#00b38f";
+                pions[7].style.backgroundColor = "#00b38f";
+                pions[8].style.backgroundColor = "#00b38f";
+                return true;
+            }
+            
+                if (pions[0].innerHTML == joueurs[tour] &&
+                pions[3].innerHTML == joueurs[tour] &&
+                pions[6].innerHTML == joueurs[tour])
+            {
+                pions[0].style.backgroundColor = "#00b38f";
+                pions[3].style.backgroundColor = "#00b38f";
+                pions[6].style.backgroundColor = "#00b38f";
+                return true;
+            }
+            
+                if (pions[1].innerHTML == joueurs[tour] &&
+                pions[4].innerHTML == joueurs[tour] &&
+                pions[7].innerHTML == joueurs[tour])
+                {
+                pions[1].style.backgroundColor = "#00b38f";
+                pions[4].style.backgroundColor = "#00b38f";
+                pions[7].style.backgroundColor = "#00b38f";
+                return true;
+            }
+            
+                if (pions[2].innerHTML == joueurs[tour] &&
+                pions[5].innerHTML == joueurs[tour] &&
+                pions[8].innerHTML == joueurs[tour])
+            {
+                pions[2].style.backgroundColor = "#00b38f";
+                pions[5].style.backgroundColor = "#00b38f";
+                pions[8].style.backgroundColor = "#00b38f";
+                return true;
+            }
+            
+                if (pions[0].innerHTML == joueurs[tour] &&
+                pions[4].innerHTML == joueurs[tour] &&
+                pions[8].innerHTML == joueurs[tour])
+            {
+                pions[0].style.backgroundColor = "#00b38f";
+                pions[4].style.backgroundColor = "#00b38f";
+                pions[8].style.backgroundColor = "#00b38f";
+                return true;
+            }
+            
+                if (pions[2].innerHTML == joueurs[tour] &&
+                pions[4].innerHTML == joueurs[tour] &&
+                pions[6].innerHTML == joueurs[tour])
+            {
+                pions[2].style.backgroundColor = "#00b38f";
+                pions[4].style.backgroundColor = "#00b38f";
+                pions[6].style.backgroundColor = "#00b38f";
+                return true;
+            }
+            
+        }
+        
+        function matchNul(pions)
+        {
+            for (var i = 0 ; i < pions.length; i++)
+            {
+                if (pions[i].innerHTML.length == 0)
+                return false;
+            }
+            
+            return true;
+        }
+        
+        var Afficheur = function(element)
+        {
+            var affichage = element;
+            
+            function setText(message)
+            {
+                affichage.innerHTML = message;
+            }
+            
+            return {sendMessage : setText};
+        }
+        
+        function main()
+        {   
+            
+            var pions = document.querySelectorAll("#Jeu button");
+            var joueurs = ['X', 'O'];
+            var tour = 0;
+            var jeuEstFini = false;
+            var afficheur = new Afficheur(document.querySelector("#StatutJeu"));
+            afficheur.sendMessage("Le jeu peut commencer ! <br /> Joueur " + joueurs[tour] + " c'est votre tour.");
+            for (var i = 0, len = pions.length; i < len; i++)
+            {
+                pions[i].addEventListener("click", function()
+                {
+                
+                    
+                    if (!estValide(this))
+                    {
+                        afficheur.sendMessage("Case occupée ! <br />Joueur " + joueurs[tour] + " c'est toujours à vous !");
+                        
+                    }
+                    else
+                    {
+                        setSymbol(this, joueurs[tour]);
+                        jeuEstFini = rechercherVainqueur(pions, joueurs, tour);
+                        
+                        if(jeuEstFini)
+                        {
+                            afficheur.sendMessage("Le joueur " + joueurs[tour] + " a gagné ! <br /> <a href=\"./Griche_Myriem_Martin_Caroline_Paitry_Robin_Morpion.html\">Rejouer</a>");
+                            return;
+                        }
+                      
+                        
+                        if (matchNul(pions))
+                        {
+                            afficheur.sendMessage("Match Nul ! <br/> <a href=\"./Griche_Myriem_Martin_Caroline_Paitry_Robin_Morpion.html\">Rejouer</a>");
+                            return;
+                        }
+                        
+                        tour++;
+                        tour = tour % 2;
+                        afficheur.sendMessage("Joueur " + joueurs[tour] + " c'est à vous !");
+                    }
+                    
+                });
+            }
+        }
+        
+        main();
+    </script>
+    <!-- CONTENT END -->
+    
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>
