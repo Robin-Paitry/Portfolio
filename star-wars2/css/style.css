@@ -1,0 +1,122 @@
+.fondaccueil {
+    background: url(../img/fond-accueil.jpg) no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    
+    
+ }
+ .titre1 {
+    text-decoration: underline;
+    font-weight:bold;
+    font-size: 42pt;
+    margin-left: 120px;
+    margin-top: 40px;
+   
+ }
+ .rior {
+     color: #2B2B2A;
+     font-weight:bold;
+     font-size: 42pt;
+  
+    margin-top: 40px;
+   
+    }
+     
+     .titre1-s {
+        text-decoration: underline;
+        font-weight:bold;
+               margin-top: 40px;
+               font-size: 42pt;
+               margin-left: -10px
+       
+   
+ }
+ .nom-perso {
+     margin-top: 35px;
+     margin-bottom: 115px;
+     margin-left:20px;
+     font-weight:bold;
+     font-size: 16pt;
+ }
+ .nom-perso-2 {
+    margin-top: 35px;
+    margin-bottom: 100px;
+    margin-left:20px;
+    font-weight:bold;
+    font-size: 16pt;
+}
+
+ .text-intro {
+     margin-top: 20px;
+ }
+
+ h1 {
+     margin-top: 40px;
+     margin-bottom: 150px;
+ }
+/*contact*/
+
+.fondcontact {
+    background: url(../img/contact-EDLM.jpg) center center no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+.text-contact {
+    font-size: 18pt;
+}
+.titre-centre {
+    text-decoration: underline;
+    font-weight:bold;
+    font-size: 42pt;
+    margin-left: 400px;
+    margin-top: 40px;
+}
+
+.alignement {
+    justify-content: space-around;
+}
+
+
+
+ .padme{
+     background: url(../img/fond-page1.png) no-repeat;
+     background-size:cover;
+     height:auto;
+    
+ 
+ }
+ .anakin{
+    background: url(../img/fond-page2.jpg) no-repeat;
+    background-size:cover;
+    height:auto;
+   
+ }
+ .leia{
+    background: url(../img/fond-page3.jpg) no-repeat;
+    background-size:cover;
+    height:auto;
+   
+ }
+ 
+.image{
+     height:500px;
+     width: 350px;
+     
+ }
+ 
+h2{
+    font-family: 'Catamaran', sans-serif;  
+}
+p{
+
+    font-family: 'Catamaran', sans-serif;    
+}
+.font{
+
+    font-family: 'Catamaran', sans-serif;  
+    font-size:  70px;
+}
+
+h3{
+    font-size:42pt;
+}
