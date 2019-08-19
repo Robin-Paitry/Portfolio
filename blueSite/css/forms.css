@@ -1,0 +1,12 @@
+input[type="text"], input[type="email"] {
+    background: transparent;
+    background-color: transparent !important;
+    color: white !important;
+
+}
+
+textarea, form-control {
+    background-color: transparent !important;
+    color: white !important;
+}
+
