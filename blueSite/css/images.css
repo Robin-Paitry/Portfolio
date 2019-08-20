@@ -1,0 +1,25 @@
+img {
+    filter: grayscale(1);
+}
+
+.imageBox {
+    overflow: hidden;
+    position: relative; /* If you want text inside of it */
+    width: 100%;
+    padding-top: 100%; /* 1:1 Aspect Ratio */
+}
+
+.portfolioImage{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.imgOverlay {
+    opacity: 0;
+}
+
+
