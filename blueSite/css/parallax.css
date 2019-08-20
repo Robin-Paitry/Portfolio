@@ -1,0 +1,10 @@
+.parallax-window-100 {
+    min-height: 100vh;
+    background: transparent;
+}
+
+.parallax-window-40 {
+    min-height: 40vh;
+    background: transparent;
+}
+
