@@ -1,0 +1,26 @@
+.siteNavbar {
+    background-color: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 0;
+    opacity: 0.5 !important;
+    z-index: 2; 
+    font-weight: 700;   
+}
+
+.portfolioNavbar a {
+    font-weight: 700;
+}
+
+.siteNavbar a {
+    text-decoration: none;
+    color: white !important;
+}
+
+.siteNavbar div ul li a, .portfolioNavbar div ul li a  {
+    border: 4px solid transparent;
+}
+
+.siteNavbar div ul li a:hover, .portfolioNavbar div ul li a:hover {
+    border: 4px solid #5bc6f2;
+    color: #5bc6f2 !important;
+}
