@@ -1,0 +1,50 @@
+.eBlueLetter {
+    color: #5bc6f2;
+}
+
+header div h2 span{
+    color: white;
+    background-color: #515f67;
+    padding: 1vh;
+    font-size: 2rem;
+}
+
+.textUnderscore {
+    border-bottom: 3px solid #fff;
+}
+
+.textUnderscoreBlack {
+    border-bottom: 3px solid #000;
+}
+
+.blockquote {
+    font-weight: 400;
+}
+.blockquote-footer {
+    background-color: transparent;
+    color: #5bc6f2;
+    font-weight: 700;
+}
+
+.icon {
+    color: #fff;
+    margin-right: 1rem;
+}
+
+footer a {
+    color: #515f67;
+}
+
+footer a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+a.disable {
+    pointer-events: none;
+    cursor: default;
+}
+
+.textGray {
+    color: #515f67;
+}
