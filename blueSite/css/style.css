@@ -1,0 +1,40 @@
+body {
+    font-family: Verdana,arial, sans-serif;
+    background-color: #515f67;
+}
+
+header {
+    position: relative;
+    top:0;
+    left:0;
+}
+
+footer {
+    background-color: #353f47;
+}
+
+.grayLayer {
+    /* background-color: #353f47; */
+    background-color: rgba(53, 63, 71, 0.6); 
+}
+
+.whiteBg {
+    background-color: #fff;
+}
+
+.grayBg {
+    background-color: #515f67;
+}
+
+.darkGrayBg {
+    background-color: #353f47;
+}
+
+.blueBg {
+    background-color: #5bc6f2;
+}
+
+.contactButton {
+    padding: 1vw 8vw 1vw 8vw;
+    background-color: #5bc6f2;
+}
